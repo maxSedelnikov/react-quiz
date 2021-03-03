@@ -70,8 +70,11 @@ jobs:
           name: build
           path: build
       - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          args: deploy --only hosting
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_REACT_QUIZ_47037 }}'
+          channelId: live
+          projectId: react-quiz-47037
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_REACT_QUIZ_47037 }}
+          FIREBASE_CLI_PREVIEWS: hostingchannels
