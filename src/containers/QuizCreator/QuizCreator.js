@@ -53,8 +53,6 @@ class QuizCreator extends React.Component {
 		event.preventDefault();
 	};
 
-	// moved to redux
-
 	addQuiestionHandler = (event) => {
 		event.preventDefault();
 
@@ -98,8 +96,6 @@ class QuizCreator extends React.Component {
 			formControls: createFormControls(),
 		});
 	};
-
-	// moved to redux
 
 	createQuizHandler = (event) => {
 		event.preventDefault();

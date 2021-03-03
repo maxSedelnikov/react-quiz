@@ -1,8 +1,6 @@
 import axios from '../../axios/axios-quiz';
 import actionTypes from './actionTypes';
 
-// mutations
-
 const {
 	FETCH_QUIZES_START,
 	FETCH_QUIZES_SUCCESS,
@@ -13,8 +11,6 @@ const {
 	QUIZ_NEXT_QUESTION,
 	QUIZ_RETRY,
 } = actionTypes;
-
-// mutation functions
 
 export function fetchQuizes() {
 	return async (dispatch) => {
